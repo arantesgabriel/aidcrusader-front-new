@@ -131,24 +131,15 @@ const ComingSoon = () => {
               </Col>
             </Row>
             <Row className="justify-content-center">
-              <Col lg="6" md="7">
-                <Form className="iq-comingsoon-form mt-5">
-                  <Form.Group className="input-group mb-3">
-                    <Form.Control
-                      type="email"
-                      className="comming mb-0"
-                      id="exampleInputEmail1"
-                      placeholder="Enter email address"
-                    />
+              <Col lg="6" md="7" className="text-center">
                     <Button
                       type="submit"
                       className="btn-primary"
+                      to="/"
                       onClick={(e) => e.preventDefault()}
                     >
-                      Subscribe
+                      Back
                     </Button>
-                  </Form.Group>
-                </Form>
               </Col>
             </Row>
           </div>
