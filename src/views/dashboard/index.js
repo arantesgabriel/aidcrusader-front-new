@@ -9,6 +9,7 @@ import {
   Collapse,
   ProgressBar,
   Button,
+  Image,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Card from "../../components/Card";
@@ -49,6 +50,8 @@ import mountain from "../../assets/images/page-img/mountain.webp";
 import pizza from "../../assets/images/page-img/pizza.webp";
 import bootstrapImg from "../../assets/images/icon/bootstrap-5.png";
 import adsImg from "../../assets/images/page-img/ads.jpg";
+
+import campaignImg1 from "../../assets/images/campaign/01.jpg";
 
 // Story components
 import Stories from "../../components/Stories";
@@ -3800,189 +3803,94 @@ const Index = () => {
                 <Card>
                   <div className="card-header d-flex justify-content-between">
                     <div className="header-title">
-                      <h4 className="card-title">Suggestions for you</h4>
+                      <h4 className="card-title">Campaigns</h4>
                     </div>
-                    <small className="fw-500 text-capitalize">See all</small>
+                    <Link to="/extra-pages/pages-comingsoon" className="text-decoration-none text-dark">
+                      <small className="fw-500 text-capitalize">See all</small>
+                    </Link>
                   </div>
                   <Card.Body className="pt-0">
                     <ul className="list-inline m-0 p-0">
                       <li className="mb-3">
-                        <div className="d-flex align-items-center gap-2 justify-content-between">
-                          <div className="d-flex align-items-center gap-3">
-                            <img
-                              src={user14}
-                              alt="story-img"
-                              className="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block"
-                            />
-                            <div>
-                              <h5>Annette Black</h5>
-                              <div className="d-flex align-items-center justify-content-between gap-2">
-                              </div>
-                              <small className="text-capitalize">
-                                Followed by dribbble + 2 more
-                              </small>
+                        <Row className="align-items-top pb-3 border-bottom">
+                          <Col md="5">
+                            <div className="image-block">
+                              <Image
+                                src={campaignImg1}
+                                className="img-fluid rounded w-100"
+                                alt="campaign-img"
+                              />
                             </div>
-                          </div>
-                          <div className="d-flex align-items-center flex-shrink-0 gap-2">
-                            <button className="btn btn-primary-subtle p-1 lh-1">
-                              <i className="material-symbols-outlined font-size-14">
-                                add
-                              </i>
-                            </button>
-                            <button className="btn btn-danger-subtle p-1 lh-1">
-                              <i className="material-symbols-outlined font-size-14">
-                                close
-                              </i>
-                            </button>
-                          </div>
-                        </div>
+                          </Col>
+                          <Col md="7">
+                            <div className="blog-description mt-1 mt-md-0">
+                              <div className="date mb-1">
+                                  <span>
+                                    4 Weeks ago
+                                  </span>
+                              </div>
+                              <Link to="/dashboard/app/campaign">
+                                <h6>Campaign Title</h6>
+                              </Link>
+                            </div>
+                          </Col>
+                        </Row>
                       </li>
                       <li className="mb-3">
-                        <div className="d-flex align-items-center gap-2 justify-content-between">
-                          <div className="d-flex align-items-center gap-3">
-                            <img
-                              src={user15}
-                              alt="story-img"
-                              className="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block"
-                            />
-                            <div>
-                              <div className="d-flex align-items-center justify-content-between gap-2">
-                                <div>
-                                  <h5>Christopher Plessis</h5>
-                                  <small className="text-capitalize">
-                                    Followed by dribbble + 2 more
-                                  </small>
-                                </div>
-                              </div>
+                        <Row className="align-items-top pb-3 border-bottom">
+                          <Col md="5">
+                            <div className="image-block">
+                              <Image
+                                src={campaignImg1}
+                                className="img-fluid rounded w-100"
+                                alt="campaign-img"
+                              />
                             </div>
-                          </div>
-                          <div className="d-flex align-items-center flex-shrink-0 gap-2">
-                            <button className="btn btn-primary-subtle p-1 lh-1">
-                              <i className="material-symbols-outlined font-size-14">
-                                add
-                              </i>
-                            </button>
-                            <button className="btn btn-danger-subtle p-1 lh-1">
-                              <i className="material-symbols-outlined font-size-14">
-                                close
-                              </i>
-                            </button>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="">
-                        <div className="d-flex align-items-center gap-2 justify-content-between">
-                          <div className="d-flex align-items-center gap-3">
-                            <img
-                              src={user16}
-                              alt="story-img"
-                              className="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block"
-                            />
-                            <div>
-                              <div className="d-flex align-items-center justify-content-between gap-2">
-                                <h5>Ellyse Perry</h5>
+                          </Col>
+                          <Col md="7">
+                            <div className="blog-description mt-1 mt-md-0">
+                              <div className="date mb-1">
+                                  <span>
+                                    4 Weeks ago
+                                  </span>
                               </div>
-                              <small className="text-capitalize">
-                                Followed by dribbble + 2 more
-                              </small>
+                              <Link to="/dashboard/app/campaign">
+                                <h6>Campaign Title</h6>
+                              </Link>
                             </div>
-                          </div>
-                          <div className="d-flex align-items-center flex-shrink-0 gap-2">
-                            <button className="btn btn-primary-subtle p-1 lh-1">
-                              <i className="material-symbols-outlined font-size-14">
-                                add
-                              </i>
-                            </button>
-                            <button className="btn btn-danger-subtle p-1 lh-1">
-                              <i className="material-symbols-outlined font-size-14">
-                                close
-                              </i>
-                            </button>
-                          </div>
-                        </div>
+                          </Col>
+                        </Row>
                       </li>
-                    </ul>
-                  </Card.Body>
-                </Card>
-
-                <Card>
-                  <div className="card-header d-flex justify-content-between">
-                    <div className="header-title">
-                      <h4 className="card-title">Latest Activities</h4>
-                    </div>
-                  </div>
-                  <Card.Body className="pt-0">
-                    <ul className="list-inline m-0 p-0">
-                      <li className="d-flex mb-3 pb-3 border-bottom">
-                        <img
-                          src={user9}
-                          alt="story-img"
-                          className="avatar-32 avatar-rounded object-cover img-fluid"
-                        />
-                        <div className="stories-data ms-3">
-                          <h6 className="font-size-14">
-                            Esther Howard{" "}
-                            <span className="fw-normal text-body">
-                              reacted comment in to your
-                            </span>{" "}
-                            <span className="fw-normal">post.</span>
-                          </h6>
-                          <small className="text-capitalize">19 min ago</small>
-                        </div>
-                      </li>
-                      <li className="d-flex mb-3 pb-3 border-bottom">
-                        <img
-                          src={user10}
-                          alt="story-img"
-                          className="avatar-32 avatar-rounded object-cover img-fluid"
-                        />
-                        <div className="stories-data ms-3">
-                          <h6 className="font-size-14">
-                            Monty Carlo{" "}
-                            <span className="text-body fw-normal">
-                              followed you.
-                            </span>
-                          </h6>
-                          <small className="text-capitalize">7 day ago</small>
-                        </div>
-                      </li>
-                      <li className="d-flex mb-3 pb-3 border-bottom">
-                        <img
-                          src={user6}
-                          alt="story-img"
-                          className="avatar-32 avatar-rounded object-cover img-fluid"
-                        />
-                        <div className="stories-data ms-3">
-                          <h6 className="font-size-14">
-                            Pete Sariya
-                            <span className="text-body fw-normal"> Voted for</span>{" "}
-                            Combination of colors from your brand palette
-                          </h6>
-                          <small className="text-capitalize">1 month ago</small>
-                        </div>
-                      </li>
-                      <li className="d-flex">
-                        <img
-                          src={user11}
-                          alt="story-img"
-                          className="avatar-32 avatar-rounded object-cover img-fluid"
-                        />
-                        <div className="stories-data ms-3">
-                          <h6 className="font-size-14">
-                            Dima Davydov{" "}
-                            <span className="text-body fw-normal">
-                              replied to your comment
-                            </span>
-                          </h6>
-                          <small className="text-capitalize">1 month ago</small>
-                        </div>
+                      <li className="mb-3">
+                        <Row className="align-items-top pb-3">
+                          <Col md="5">
+                            <div className="image-block">
+                              <Image
+                                src={campaignImg1}
+                                className="img-fluid rounded w-100"
+                                alt="campaign-img"
+                              />
+                            </div>
+                          </Col>
+                          <Col md="7">
+                            <div className="blog-description mt-1 mt-md-0">
+                              <div className="date mb-1">
+                                  <span>
+                                    4 Weeks ago
+                                  </span>
+                              </div>
+                              <Link to="/dashboard/app/campaign">
+                                <h6>Campaign Title</h6>
+                              </Link>
+                            </div>
+                          </Col>
+                        </Row>
                       </li>
                     </ul>
                   </Card.Body>
                 </Card>
               </div>
             </Col>
-
           </Row>
         </Container>
       </div>

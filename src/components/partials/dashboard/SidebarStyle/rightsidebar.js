@@ -12,6 +12,7 @@ import user7 from "../../../../assets/images/user/13.jpg";
 import user8 from "../../../../assets/images/user/14.jpg";
 import user9 from "../../../../assets/images/user/15.jpg";
 import user10 from "../../../../assets/images/user/16.jpg";
+import crusaderMib from "../../../../assets/images/home/crusader-mib.png";
 
 import { Link, useNavigate } from "react-router-dom";
 
@@ -492,7 +493,12 @@ const RightSidebar = () => {
                 </Button>
               </div>
               <div className="right-sidebar-toggle bg-primary text-white mt-3 d-flex" onClick={minirightsidebar}>
-                <span className="material-symbols-outlined">chat</span>
+                <img
+                  src={crusaderMib}
+                  className="crusader-mib-img"
+                  alt="crusader mib icon"
+                  style={{ width: "25px" }}
+                />
               </div>
             </Card.Body>
           </Card>
