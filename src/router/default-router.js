@@ -78,6 +78,8 @@ import TermsofService from "../views/dashboard/extrapages/terms-of-service";
 import BlankPage from "../views/dashboard/extrapages/blankpage";
 import Admin from "../views/dashboard/app/admin";
 
+import Campaign from "../views/dashboard/app/campaign";
+
 export const DefaultRouter = [
   {
     path: "/",
@@ -230,6 +232,10 @@ export const DefaultRouter = [
   {
     path: "dashboard/app/admin",
     element: <Admin />,
+  },
+  {
+    path: "dashboard/app/campaign",
+    element: <Campaign />,
   },
   // Ui-kit
   {

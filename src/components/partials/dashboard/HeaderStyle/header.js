@@ -14,6 +14,10 @@ import shop1 from "../../../../assets/images/store/06.jpg";
 import shop2 from "../../../../assets/images/store/02.jpg";
 import shop3 from "../../../../assets/images/store/01.jpg";
 
+import crusaderMart from "../../../../assets/images/home/crusader-mart.png";
+import crusaderPlace from "../../../../assets/images/home/crusader-place.png";
+import crusaderTv from "../../../../assets/images/home/crusader-tv.png";
+
 // Import selectors & action from setting store
 import * as SettingSelector from "../../../../store/setting/selectors";
 
@@ -107,87 +111,41 @@ const Header = () => {
                       <li className="nav-item">
                         <Link
                           className={`nav-link menu-arrow justify-content-start ${active === "home" ? 'active' : ''}`}
-                          to="/"
+                          to="/extra-pages/pages-comingsoon"
                           onClick={() => setActive("home")}
                         >
-                          <span className="nav-text">Home</span>
+                          <img
+                            src={crusaderMart}
+                            style={{ width: "100px" }}
+                            alt="images"
+                          />
                         </Link>
                       </li>
                       <li className="nav-item">
                         <Link
-                          className={`nav-link menu-arrow justify-content-start ${active === "blog" ? 'active' : ''}`}
-                          onClick={() => setActive("blog")}
-                          data-bs-toggle="collapse"
-                          to="#blogData"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="blogData"
+                          className={`nav-link menu-arrow justify-content-start ${active === "home" ? 'active' : ''}`}
+                          to="/extra-pages/pages-comingsoon"
+                          onClick={() => setActive("home")}
                         >
-                          <span className="nav-text">Blog</span>
+                          <img
+                            src={crusaderPlace}
+                            style={{ width: "100px" }}
+                            alt="images"
+                          />
                         </Link>
-                        <ul
-                          className="iq-header-sub-menu list-unstyled collapse shadow"
-                          id="blogData"
-                        >
-                          <li className="nav-item">
-                            <Link className={`nav-link ${active === "Blog Grid" ? 'active' : ''}`} to="/dashboard/blog/blog-grid" onClick={() => setActive("Blog Grid")}>
-                              Blog Grid
-                            </Link>
-                          </li>
-                          <li className="nav-item">
-                            <Link className={`nav-link ${active === "Blog List" ? 'active' : ''}`} to="/dashboard/blog/blog-list" onClick={() => setActive("Blog List")}>
-                              Blog List
-                            </Link>
-                          </li>
-                          <li className="nav-item">
-                            <Link className={`nav-link ${active === "Blog Detail" ? 'active' : ''}`} to="/dashboard/blog/blog-detail" onClick={() => setActive("Blog Detail")}>
-                              Blog Detail
-                            </Link>
-                          </li>
-                        </ul>
                       </li>
                       <li className="nav-item">
                         <Link
-                          className={`nav-link menu-arrow justify-content-start ${active === "store" ? 'active' : ''}`}
-                          onClick={() => setActive("store")}
-                          data-bs-toggle="collapse"
-                          to="#storeData"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="storeData"
+                          className={`nav-link menu-arrow justify-content-start ${active === "home" ? 'active' : ''}`}
+                          to="/extra-pages/pages-comingsoon"
+                          onClick={() => setActive("home")}
                         >
-                          <span className="nav-text">Store</span>
+                          <img
+                            src={crusaderTv}
+                            style={{ width: "100px" }}
+                            alt="images"
+                          />
                         </Link>
-                        <ul
-                          className="iq-header-sub-menu list-unstyled collapse shadow"
-                          id="storeData"
-                        >
-                          <li className="nav-item">
-                            <Link className={`nav-link ${active === "Category Grid" ? 'active' : ''}`} to="/dashboards/store/store-category-grid" onClick={() => setActive("Category Grid")}>
-                              Category Grid
-                            </Link>
-                          </li>
-                          <li className="nav-item">
-                            <Link className={`nav-link ${active === "Category List" ? 'active' : ''}`} to="/dashboards/store/store-category-list" onClick={() => setActive("Category List")}>
-                              Category List
-                            </Link>
-                          </li>
-                          <li className="nav-item">
-                            <Link className={`nav-link ${active === "Store Detail" ? 'active' : ''}`} to="/dashboards/store/store-detail" onClick={() => setActive("Store Detail")}>
-                              Store Detail
-                            </Link>
-                          </li>
-                          <li className="nav-item">
-                            <Link className={`nav-link ${active === "Product Detail" ? 'active' : ''}`} to="/dashboards/store/product-detail" onClick={() => setActive("Product Detail")}>
-                              Product Detail
-                            </Link>
-                          </li>
-                          <li className="nav-item">
-                            <Link className={`nav-link ${active === "Checkout" ? 'active' : ''}`} to="/dashboards/store/store-checkout" onClick={() => setActive("Checkout")}>
-                              Checkout
-                            </Link>
-                          </li>
-                        </ul>
                       </li>
                     </ul>
                   </div>
@@ -224,21 +182,6 @@ const Header = () => {
 
             <ul className="navbar-nav navbar-list">
               <Dropdown as="li" className="nav-items">
-                <Dropdown.Toggle bsPrefix=" " as="a"
-                  to="#"
-                  className=" d-flex align-items-center"
-                  id="mail-drop"
-                >
-                  <span className="material-symbols-outlined position-relative">
-                    shopping_bag
-                    <span className="bg-primary text-white shopping-badge">
-                      3
-                    </span>
-                  </span>
-                  <span className="mobile-text d-none ms-3">
-                    Shopping Cart
-                  </span>
-                </Dropdown.Toggle>
                 <Dropdown.Menu
                   className={`sub-drop header-notification `}
                   data-bs-popper="static"

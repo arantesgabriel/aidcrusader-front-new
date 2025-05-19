@@ -61,7 +61,7 @@ export const defaultState: SettingDefaultState = {
       target: '[data-setting="app_name"]',
       choices: [],
       type: "text",
-      value: "SocialV",
+      value: "Aid Crusader",
     },
     theme_scheme_direction: {
       target: "html",
