@@ -17,8 +17,9 @@ Footer
 		li {
 			a {
 				color:$body-color;
+				font-weight: bolder;
 				&:hover {
-					color: var(--#{$variable-prefix}primary);
+					color: #0F1432;
 					text-decoration: none;
 				}
 			}

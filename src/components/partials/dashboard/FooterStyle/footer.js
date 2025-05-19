@@ -23,7 +23,7 @@ const Footer = (props) => {
         <>
             <footer className="iq-footer">
                 <Container fluid>
-                    <Row>
+                    <Row className='fw-bold'>
                         <Col lg="6">
                             <ul className="list-inline mb-0">
                                 <li className="list-inline-item"><Link to="/dashboard/extrapages/privacy-policy">Privacy Policy</Link></li>{' '}
@@ -31,7 +31,7 @@ const Footer = (props) => {
                             </ul>
                         </Col>
                         <Col lg="6" className="d-flex justify-content-end">
-                            Copyright 2024 <Link to="/" className='mx-1'>SocialV</Link>All Rights Reserved.
+                            Copyright 2025 <Link to="/" className='mx-1'>Aid Crusader</Link>All Rights Reserved.
                         </Col>
                     </Row>
                 </Container>
