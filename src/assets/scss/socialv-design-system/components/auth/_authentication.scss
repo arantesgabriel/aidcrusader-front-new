@@ -30,7 +30,7 @@
 }
 
 .sign-in-from {
-	padding: 2rem;
+	padding: 1rem;
 	max-width: 35.375rem;
 	margin: 0 auto;
 }
@@ -39,6 +39,221 @@
 	border-top: 1px solid $border-color;
 	margin-top: 1.875rem;
 	padding-top: 1.25rem;
+}
+
+.giveandreceive{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #0F1432;
+  margin: 4%;
+}
+
+.scroll-down-link-sign-in {
+  color: gray;
+}
+
+.scroll-down-link-sign-in:hover {
+  transform: translateY(4px);
+  color: #2690db;
+}
+
+.scroll-down-link-landing {
+  color: rgb(229, 255, 0);
+}
+
+.scroll-down-link-landing:hover {
+  transform: translateY(4px);
+  color: white;
+}
+
+
+.infoContainer{
+	> .info {
+    margin-bottom: 10vh;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.InfoBox{
+  display: grid;
+  margin-top: 4%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 3rem;
+  .image {
+    grid-row: span 2;
+  }
+  .title {
+    margin-bottom: 1rem;
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 45px;
+  }
+  .sub {
+    line-height: 30px;
+	font-size: 1.3rem;
+    letter-spacing: .5px;
+  }
+  button {justify-self: center}
+}
+
+.TestimonialsWrapper{
+  .info {
+    margin-bottom: 28px;
+	color: black;
+  }
+  .title {
+    font-size: 3rem;
+    line-height: 54px;
+	font-weight: bolder;
+	color: black;
+  }
+  .sub {
+    font-size: 1.4rem;
+    line-height: 28px;
+	color: black;
+  }
+}
+
+.Container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #0F1432;
+}
+
+.Carousel {
+  cursor: grab;
+  overflow: hidden;
+  width: 100%;
+}
+
+.Inner {
+  display: flex;
+  gap: 0px 30px;
+  animation: slide-in 0.8s ease-out forwards;
+}
+
+.Item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 26%;
+  gap: 15px 80px;
+  padding: 14px 14px 28px;
+  margin: 0px;
+  width: 50px;
+  color: black;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+
+.Item-campaign{
+	min-height: 200px;
+	border: black solid 1px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.Item .title {
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+.Item .desc {
+  font-size: 1.2rem;
+}
+
+.Item .donations {
+  height: 100%;     
+  gap: 3px;
+}
+
+.Item .bottom-campaign{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100%;
+	gap: 10px;
+}
+
+.Item .values {
+  font-weight: 500;
+  font-size: 1rem;
+  padding-inline: 3%;
+}
+
+.button-donate{
+	background-color: #50b5ff;
+	color: white;
+	justify-self: center;
+	position: relative;
+    box-sizing: border-box;
+    user-select: none;
+    vertical-align: middle;
+	font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    padding: 6px 16px;
+    border-radius: 4px;
+	height: 48px;
+}
+
+.button-donate-only-color{
+	background-color: #50b5ff;
+	border-color: #50b5ff;
+	color: white;
+	padding: 0;
+}
+
+.button-donate:hover{
+	background-color: #2690db;
+	color: white;
+}
+
+.button-donate-only-color:hover{
+	background-color: #2690db;
+	border-color: #2690db;
+	color: white;
+}
+
+.blue-aid{
+	color: #0F1432;
+}
+
+.bg-light-blue{
+	background-color: #81d3f6;
+}
+
+/* campaigns */
+
+.campaign-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha os filhos ao fundo */
+  height: 100%;       /* Garante que ocupe toda a altura do card pai */
+}
+
+/*	testimonials */
+
+.author{
+	padding-right: 16px;
+	border-right: #00000080 1px solid;
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	align-content: flex-end;
+	width: 100%;
+}
+
+.author-info{
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
 }
 
 .iq-social-media {
@@ -170,6 +385,18 @@
 	z-index: 2;
 }
 
+.adjust-landing{
+	padding-left: 7%; 
+	padding-top: 5%; 
+	width: 60%;
+}
+
+@media (min-height: 799px) and (max-height: 1400px) {
+  #landing-back-bg {
+    height: 50vh!important;
+  }
+}
+
 @include media-breakpoint-down(lg) {
 	.sign-in-page {
 		overflow-y: scroll;
@@ -179,12 +406,147 @@
 		padding-left: 1.25rem;
 		padding-right: 1.25rem;
 	}
+
+	.InfoBox{
+		display: flex;
+		margin-block: 4%;
+		flex-direction: column;
+		gap: 0 3%;
+		.image {
+			grid-row: span 2;
+		}
+		.title {
+			margin-bottom: 1rem;
+			font-size: 1.8rem;
+			font-weight: 600;
+			line-height: 45px;
+		}
+		.sub {
+			line-height: 30px;
+			font-size: 1.2rem;
+			letter-spacing: .5px;
+		}
+		button {justify-self: center}
+		}
+		.giveandreceive{
+			text-align: center;
+			font-size: 2.4rem;
+			font-weight: 600;
+			color: #0F1432;
+		}
+
+		.TestimonialsWrapper{
+			.info {
+				margin-bottom: 28px;
+				color: black;
+			}
+			.title {
+				font-size: 2.3rem;
+				line-height: 54px;
+				font-weight: bolder;
+				color: black;
+				text-transform: lowercase;
+			}
+			.sub {
+				font-size: 1.3rem;
+				line-height: 28px;
+				color: black;
+			}
+		}
+
+	.button-donate{
+		width: 60%!important;
+		margin-block: 3%;
+	}
+
+	.adjust-landing{
+		padding-block: 4%;
+		width: 100%;
+	}
+	.Item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 0 0 40%;
+		gap: 15px 80px;
+		padding: 14px 14px 28px;
+		margin: 0px;
+		width: 50px;
+		color: black;
+		background-color: #f8f9fa;
+		border-radius: 12px;
+	}
 }
 
 @include media-breakpoint-down(md) {
 	.sign-in-detail {
 		padding: 3.125rem 1.25rem;
 	}
+
+	.giveandreceive{
+			text-align: center;
+			font-size: 2.4rem;
+			font-weight: 600;
+			color: #0F1432;
+		}
+
+	.button-donate{
+		width: 100%!important;
+		margin-inline: 4%;
+	}
+
+	.InfoBox{
+		display: flex;
+		margin-block: 4%;
+		flex-direction: column;
+		gap: 0 3%;
+		.image {
+			grid-row: span 2;
+			margin-block: 7%;
+		}
+		.title {
+			margin-bottom: 1rem;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 45px;
+		}
+		.sub {
+			font-size: 16px;
+			letter-spacing: .5px;
+			margin-top: 5%;
+		}
+		button {justify-self: center}
+		}
+		.giveandreceive{
+			text-align: center;
+			font-size: 2.4rem;
+			font-weight: 600;
+			color: #0F1432;
+		}
+
+		#landing-back-bg{
+			align-items: center!important;
+			justify-content: center!important;
+		}
+
+		.adjust-landing{
+			padding-inline: 4%;
+			width: 100%;
+		}
+
+		.Item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			flex: 0 0 100%;
+			gap: 15px 80px;
+			padding: 14px 14px 28px;
+			margin: 0px;
+			width: 50px;
+			color: black;
+			background-color: #f8f9fa;
+			border-radius: 12px;
+		}
 }
 
 @-webkit-keyframes circle-small-scale {
@@ -218,5 +580,41 @@
 
 	.sign-in-detail {
 		height: auto;
+	}
+	.giveandreceive{
+			text-align: center;
+			font-size: 28px;
+			font-weight: 600;
+			color: #0F1432;
+		}
+
+	.button-donate{
+		width: 100%!important;
+		padding-inline: 0;
+		margin-inline: 0;
+	}
+
+	.adjust-landing{
+		padding-inline: 4%;
+		width: 100%;
+	}
+
+	.Item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 0 0 100%;
+		gap: 15px 80px;
+		padding: 14px 14px 28px;
+		margin: 0px;
+		width: 50px;
+		color: black;
+		background-color: #f8f9fa;
+		border-radius: 12px;
+	}
+
+	.next-prev{
+        width: 40!important;
+        height: 20!important;
 	}
 }
