@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useRef } from "react";
 
-import Zuck from "zuck.js";
+import "../assets/scss/socialv-design-system/components/story/zuck.min.css"
 
 const Stories = (props) => {
   const ref = useRef(null);
@@ -25,71 +25,63 @@ const Stories = (props) => {
   };
 
   useEffect(() => {
-    if (ref.current !== null) {
-      const storyArr = [];
-      stateStory.forEach((item) => {
-        const arr = [];
-        if (item.preview !== undefined) {
-          item.preview.forEach((arrItem) => {
-            arr.push({
-              id: arrItem.storyid,
-              type: arrItem.type,
-              length: arrItem.length,
-              src: arrItem.src,
-              preview: arrItem.storypreview,
-              link: arrItem.link,
-              linkText: arrItem.linkText,
-              seen: arrItem.seen,
-              time: timestamp(),
-            });
+  if (ref.current !== null) {
+    const storyArr = [];
+
+    stateStory.forEach((item) => {
+      const arr = [];
+      if (item.preview !== undefined) {
+        item.preview.forEach((arrItem) => {
+          arr.push({
+            id: arrItem.storyid,
+            type: arrItem.type,
+            length: arrItem.length,
+            src: arrItem.src,
+            preview: arrItem.storypreview,
+            link: arrItem.link,
+            linkText: arrItem.linkText,
+            seen: arrItem.seen,
+            time: timestamp(),
           });
-          storyArr.push({
-            id: item.id,
-            photo: item.photo,
-            name: item.name,
-            link: item.link,
-            lastUpdated: timestamp(),
-            items: arr,
-          });
-        }
-      });
-      
-      try {
-        if (typeof Zuck === 'function') {
-          console.log("Inicializando Zuck como função");
-          
-          Zuck(ref.current, {
-            id: "stories",
-            skin: "snapgram",
-            autoFullScreen: true,
-            avatars: true,
-            stories: storyArr,
-          });
-        } else {
-          console.error("Zuck não é uma função", typeof Zuck);
-          if (Zuck.default && typeof Zuck.default === 'function') {
-            console.log("Usando Zuck.default");
-            Zuck.default(ref.current, {
-              id: "stories",
-              skin: "snapgram",
-              autoFullScreen: true,
-              avatars: true,
-              stories: storyArr,
-            });
-          }
-        }
-      } catch (error) {
-        console.error("Erro ao inicializar Zuck:", error);
+        });
+        storyArr.push({
+          id: item.id,
+          photo: item.photo,
+          name: item.name,
+          link: item.link,
+          lastUpdated: timestamp(),
+          items: arr,
+        });
       }
+    });
+
+    try {
+      const Z = window.Zuck;
+      if (typeof Z === "function") {
+        Z(ref.current, {
+          id: "stories",
+          skin: "snapgram",
+          autoFullScreen: true,
+          avatars: true,
+          stories: storyArr,
+        });
+      } else {
+        console.error("Zuck não é uma função válida", typeof Z, Z);
+      }
+    } catch (error) {
+      console.error("Erro ao inicializar Zuck:", error);
     }
-  }, [stateStory]);
+  }
+}, [stateStory]);
+
+
 
   return (
     <Fragment>
       <div
         id="stories"
         ref={ref}
-        className="storiesWrapper d-flex gap-3 stories user-icon carousel snapgram "
+        className="storiesWrapper d-flex stories carousel snapgram user-icon "
       ></div>
     </Fragment>
   );
