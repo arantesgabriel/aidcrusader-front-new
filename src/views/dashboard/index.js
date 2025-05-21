@@ -220,13 +220,12 @@ const Index = () => {
       ],
     },
     {
-      id: "roger-1",
+      id: "milena-1",
       photo: user3,
-      name: "Roger",
-      link: "",
+      name: "Milena",
       preview: [
         {
-          storyid: "roger-1",
+          storyid: "milena-1",
           type: "photo",
           length: 5,
           src: "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/8.jpg",
@@ -3776,7 +3775,7 @@ const Index = () => {
                         className="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block"
                       />
                       <div>
-                        <h5 className="d-inline-block">Jerome Bell</h5>
+                        <h5 className="d-inline-block">Aline Bell</h5>
                         <span className="profile-status-offline"></span>
                         <small className="text-capitalize d-block">
                           7 hours ago
@@ -3790,7 +3789,7 @@ const Index = () => {
                         className="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block"
                       />
                       <div>
-                        <h5 className="d-inline-block">Arlene McCoy</h5>
+                        <h5 className="d-inline-block">Joe McCoy</h5>
                         <span className="profile-status-offline"></span>
                         <small className="text-capitalize d-block">
                           4 days ago
