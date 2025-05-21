@@ -25,7 +25,7 @@ import user13 from "../../assets/images/user/05.jpg";
 import user14 from "../../assets/images/user/06.jpg";
 import user15 from "../../assets/images/user/07.jpg";
 import user16 from "../../assets/images/user/08.jpg";
-import user5 from "../../assets/images/page-img/fun.webp";
+import user5 from "../../assets/images/page-img/birthday-party.jpg";
 import user6 from "../../assets/images/user/13.jpg";
 import user7 from "../../assets/images/user/17.jpg";
 import user8 from "../../assets/images/user/16.jpg";
@@ -43,15 +43,17 @@ import icon5 from "../../assets/images/icon/05.png";
 import icon6 from "../../assets/images/icon/06.png";
 import icon7 from "../../assets/images/icon/07.png";
 import loader from "../../assets/images/page-img/page-load-loader.gif";
-import boyImg from "../../assets/images/page-img/boy.webp";
-import busImg from "../../assets/images/page-img/bus.webp";
+import boyImg from "../../assets/images/page-img/boy.jpeg";
+import busImg from "../../assets/images/page-img/bus.png";
 import img11 from "../../assets/images/page-img/fd.webp";
-import mountain from "../../assets/images/page-img/mountain.webp";
-import pizza from "../../assets/images/page-img/pizza.webp";
+import mountain from "../../assets/images/page-img/mountain-img.jpg";
+import pizza from "../../assets/images/page-img/pizza.jpg";
 import bootstrapImg from "../../assets/images/icon/bootstrap-5.png";
 import adsImg from "../../assets/images/page-img/ads.jpg";
 
-import campaignImg1 from "../../assets/images/campaign/01.jpg";
+import campaignImg1 from "../../assets/images/campaign/01.png";
+import campaignImg2 from "../../assets/images/campaign/02.jpg";
+import campaignImg3 from "../../assets/images/campaign/03.png";
 
 // Story components
 import Stories from "../../components/Stories";
@@ -3841,7 +3843,7 @@ const Index = () => {
                           <Col md="5">
                             <div className="image-block">
                               <Image
-                                src={campaignImg1}
+                                src={campaignImg3}
                                 className="img-fluid rounded w-100"
                                 alt="campaign-img"
                               />
@@ -3866,7 +3868,7 @@ const Index = () => {
                           <Col md="5">
                             <div className="image-block">
                               <Image
-                                src={campaignImg1}
+                                src={campaignImg2}
                                 className="img-fluid rounded w-100"
                                 alt="campaign-img"
                               />
