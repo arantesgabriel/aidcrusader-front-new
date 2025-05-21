@@ -99,18 +99,20 @@ const Recoverpw = () => {
             </Col>
             <Col md={6}>
               <div className="sign-in-from">
-                <Link
-                  to={"/"}
-                  className="d-inline-flex align-items-center justify-content-center gap-2"
-                >
-                   <img
-                      src={logo}
-                      style={{width: '300px'}}
-                      className="signin-img img-fluid mb-0 rounded-3"
-                      alt="images"
-                    />
-                </Link>
-                <p className="mt-3 font-size-16">
+                <div className="align-items-center justify-content-center d-flex">
+                  <Link
+                    to={"/"}
+                    className="d-inline-flex align-items-center justify-content-center text-center gap-2"
+                  >
+                    <img
+                        src={logo}
+                        style={{width: '300px'}}
+                        className="img-fluid justify-content-center text-center"
+                        alt="images"
+                      />
+                  </Link>
+                </div>
+                <p className="mt-3 font-size-16 text-justify">
                   Enter your email address and we'll send you an email with
                   instructions to reset your password.
                 </p>
@@ -120,16 +122,20 @@ const Recoverpw = () => {
                     <Form.Control
                       type="email"
                       className="form-control mb-0"
-                      placeholder="Your Full Name"
-                      defaultValue="Enter email"
+                      placeholder="Enter email"
                     />
                   </Form.Group>
-                  <button
-                    type="button"
-                    className="btn btn-primary mt-4 fw-semibold text-uppercase letter-spacing-1"
-                  >
-                    reset password
-                  </button>
+                  <div className="align-items-center justify-content-center d-flex flex-column">
+                    <button
+                      type="button"
+                      className="btn btn-primary mt-4 fw-semibold text-uppercase letter-spacing-1"
+                    >
+                      reset password
+                    </button>
+                    <h6 className="mt-2">
+                      <Link to={"/auth/sign-in"}>Return to Login</Link>
+                    </h6>
+                  </div>
                 </Form>
               </div>
             </Col>

@@ -163,10 +163,11 @@ const SignIn = () => {
                   </div>
                   {/* <Link type="button" className="btn btn-primary mt-4 fw-semibold text-uppercase w-100" to="#">sign in</Link> */}
                     <Button
+                      variant="primary"
                       type="button"
-                      className="btn button-donate-only-color mt-4 fw-semibold text-uppercase w-100"
+                      className="btn btn-primary mt-4 fw-semibold text-uppercase w-100"
                     >
-                      Sign in
+                      Sign In
                     </Button>
                   <h6 className="mt-5 rounded-3 p-2 w-100">
                     Don't Have An Account ?{" "}
@@ -288,9 +289,9 @@ const SignIn = () => {
         <div style={{marginTop:4, marginBottom: 3, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <Link
                   to={"/auth/sign-up"}
-                  className="d-inline-flex button-donate w-25 align-items-center justify-content-center gap-2"
+                  className="d-inline-flex button-donate p-0 m-0 w-25 align-items-center justify-content-center"
                 >
-            <Button variant="primary" color="primary" className="w-100">Become a Crusader</Button>
+            <Button variant="primary" color="primary" className="w-100 h-100">Become a Crusader</Button>
           </Link>
         </div>      
 
