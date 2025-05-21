@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import AppCarouselCampaign from "../../../components/campaign-card";
 import AppCarouselTestimony from "../../../components/testimonial-card"
 import Footer from "../../../components/partials/dashboard/FooterStyle/footer";
+import FooterLanding from "../../../components/partials/dashboard/FooterStyle/footer-landing";
 
 //icons
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
@@ -298,6 +299,7 @@ const SignIn = () => {
       </Container>
       </section>  
       <section>
+        <FooterLanding />
         <Footer />
       </section>
     </>
