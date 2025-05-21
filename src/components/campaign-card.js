@@ -124,6 +124,7 @@ export default function AppCarouselCampaign() {
       {/* Botão esquerdo com ícone */}
       <Button
         className="rounded-circle next-prev"
+        variant="outline-primary"
         onClick={prevSlide}
         style={{
           width: 40,
@@ -148,6 +149,7 @@ export default function AppCarouselCampaign() {
       {/* Botão direito com ícone */}
       <Button
         className="rounded-circle next-prev"
+        variant="outline-primary"
         onClick={nextSlide}
         style={{
           width: 40,

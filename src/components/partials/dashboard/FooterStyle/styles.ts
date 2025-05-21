@@ -35,17 +35,33 @@ export const NavMenu = styled.nav`
         > a {
             color: #000;
         }
+
+        > a:hover{
+            text-decoration: underline;
+            color: #495057!important;
+        }
     }
 `
 
 export const NavFollowUs = styled.nav`
-    color: #000;
+    color: #000!important;
     display: flex;
     flex-direction: column;
     align-items: left;      
+    text-decoration: none!important;
     
     width: 100%;
     padding: 0px 30px;
+
+    a{
+        color: #000!important;
+        text-decoration: none!important;
+    }
+
+    a:hover{
+        color: #495057!important;
+        text-decoration: none!important;
+    }
 
     > div {
         display: flex;
