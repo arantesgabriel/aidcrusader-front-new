@@ -18,6 +18,7 @@ const Sidebar = () => {
   const sidebarType = useSelector(SettingSelector.sidebar_type); // array
   const sidebarMenuStyle = useSelector(SettingSelector.sidebar_menu_style);
   const [logoSrc, setLogoSrc] = useState(logoSidebar);
+  const [logoSize, setLogoSize] = useState(logoSidebar);
   
   useEffect(() => {
     Scrollbar.init(document.querySelector(".data-scrollbar"));
@@ -61,8 +62,10 @@ const Sidebar = () => {
     // Altera o logo conforme o estado da sidebar
     if (sidebar.classList.contains("sidebar-mini")) {
       setLogoSrc(logoMiniSidebar);
+      setLogoSize(100);
     } else {
       setLogoSrc(logoSidebar);
+      setLogoSize(300);
     }
   };
 
@@ -76,14 +79,14 @@ const Sidebar = () => {
         data-toggle="main-sidebar"
         data-sidebar="responsive"
       >
-        <div className="sidebar-header d-flex align-items-center justify-content-start position-relative">
+        <div className="sidebar-header d-flex align-items-center justify-content-center position-relative">
           <Link
             to="/"
-            className="d-flex align-items-center gap-2 iq-header-logo"
+            className="d-flex align-items-center justify-content-center gap-2 iq-header-logo"
           >
             <img
               src={logoSrc}
-              style={{ width: "250px" }}
+              style={{width: logoSize+'px'}}
               className="signin-img img-fluid mb-0 rounded-3"
               alt="images"
             />
