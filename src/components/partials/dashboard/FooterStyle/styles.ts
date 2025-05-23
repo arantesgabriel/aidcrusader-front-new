@@ -40,6 +40,14 @@ export const NavMenu = styled.nav`
             text-decoration: underline;
             color: #495057!important;
         }
+        > img {
+            color: #000;
+        }
+
+        > svg:hover{
+            text-decoration: underline;
+            color: #495057!important;
+        }
     }
 `
 

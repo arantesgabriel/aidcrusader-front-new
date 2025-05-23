@@ -78,6 +78,7 @@
   // scss-docs-end root-body-variables
 
   --#{$prefix}heading-color: #{$headings-color};
+  --#{$prefix}sub-color: #{$subs-color};
 
   --#{$prefix}link-color: #{$link-color};
   --#{$prefix}link-color-rgb: #{to-rgb($link-color)};
@@ -165,6 +166,7 @@
     }
 
     --#{$prefix}heading-color: #{$headings-color-dark};
+    --#{$prefix}sub-color: #{$subs-color-dark};
 
     --#{$prefix}link-color: #{$link-color-dark};
     --#{$prefix}link-hover-color: #{$link-hover-color-dark};

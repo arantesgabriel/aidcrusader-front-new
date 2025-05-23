@@ -2,8 +2,8 @@ import React from "react";
 import { Row, Col, Container, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import AppCarouselCampaign from "../../../components/campaign-card";
-import AppCarouselTestimony from "../../../components/testimonial-card"
 import Footer from "../../../components/partials/dashboard/FooterStyle/footer";
+import FooterLanding from "../../../components/partials/dashboard/FooterStyle/footer-landing";
 
 //icons
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
@@ -33,7 +33,6 @@ import landingBackFull from "../../../assets/images/login/landing-back-full.svg"
 SwiperCore.use([Navigation, Autoplay]);
 
 const SignIn = () => {
-  const appName = useSelector(SettingSelector.app_name);
 
   return (
     <>
@@ -70,7 +69,7 @@ const SignIn = () => {
                       <h2 className="mb-3 fw-bold text-white">
                         Power UP Your Friendship
                       </h2>
-                      <p className="font-size-16 mb-0">
+                      <p className="font-size-16 mb-0 text-white">
                         It is a long established fact that a reader will be
                         <br /> distracted by the readable content.
                       </p>
@@ -84,7 +83,7 @@ const SignIn = () => {
                       <h2 className="mb-3 fw-bold text-white">
                         Connect with the world
                       </h2>
-                      <p className="font-size-16 mb-0">
+                      <p className="font-size-16 mb-0 text-white">
                         It is a long established fact that a reader will be
                         <br /> distracted by the readable content.
                       </p>
@@ -98,7 +97,7 @@ const SignIn = () => {
                       <h2 className="mb-3 fw-bold text-white">
                         Together Is better
                       </h2>
-                      <p className="font-size-16 mb-0">
+                      <p className="font-size-16 mb-0 text-white">
                         It is a long established fact that a reader will be
                         <br /> distracted by the readable content.
                       </p>
@@ -238,17 +237,17 @@ const SignIn = () => {
 
         <div className="infoContainer mt-5">
           {/* WHY CAMPAIGN */}
-          <div className="info blue-aid mt-5 pt-5">
+          <div className="info mt-5 pt-5">
             <h2 className="title fw-bold p-0">WHY NOT USE CROWDFUNDING WITHIN A SOCIAL MEDIA NETWORK TO MEET YOUR URGENT NEEDS?</h2>
             <h2 className="sub fw-bold">Aid Crusader, the social network that is a powerful crowdfunding tool for humanitarian aid.</h2>
             <h2 className="sub fw-bold">Together we can make a difference.</h2>
           </div>
 
           {/* GLOBAL COMMUNITY */}
-          <div className="InfoBox blue-aid" role="img">
+          <div className="InfoBox" role="img">
             <div className="info">
               <h4 className="title">Join a global community of engaged individuals dedicated to helping those in need.</h4>
-              <span className="sub">Aid Crusader is a unique platform, created with the mission to enable anyone to contribute to important causes around the world. With our social network, you can connect with people who share the same values and goals, discover trustworthy charitable organizations, and support their fundraising campaigns.</span>
+              <p className="sub">Aid Crusader is a unique platform, created with the mission to enable anyone to contribute to important causes around the world. With our social network, you can connect with people who share the same values and goals, discover trustworthy charitable organizations, and support their fundraising campaigns.</p>
             </div>
             <img className="image" src={globalCommunity} alt="Join the global community" style={{width: '100%'}}/>
             <Link
@@ -260,12 +259,12 @@ const SignIn = () => {
           </div>
 
           {/* NEED HELP */}
-          <div className="InfoBox blue-aid" role="img">
+          <div className="InfoBox" role="img">
             <img className="image" src={needHelp} alt="Are you in need of assistance?Are you in need of assistance?" style={{width: '100%'}} />
             <div className="info">
               <h4 className="title">Are you in need of assistance?</h4>
               <h1 className="mt-3 mb-3 fw-bold">For you, for your community, or organization.</h1>
-              <span className="sub">At Aid Crusader, with just a few clicks, you can start your campaign and engage with a charitable and humanitarian community that works to help people and causes around the world.</span>
+              <p className="sub">At Aid Crusader, with just a few clicks, you can start your campaign and engage with a charitable and humanitarian community that works to help people and causes around the world.</p>
             </div>
             <Link
                   to={"/auth/sign-up"}
@@ -276,28 +275,10 @@ const SignIn = () => {
           </div>
           {/*onClick={handleOpenDialog}*/}
         </div>
-
-        {/* TESTIMONIALS */}
-        <div className="TestimonialsWrapper mt-5 pt-5">
-          <div className="info">
-            <h2 className="title">Testimonials</h2>
-            <h6 className="sub mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
-          </div>
-          <AppCarouselTestimony />
-        </div>
-
-        <div style={{marginTop:4, marginBottom: 3, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-          <Link
-                  to={"/auth/sign-up"}
-                  className="d-inline-flex button-donate p-0 m-0 w-25 align-items-center justify-content-center"
-                >
-            <Button variant="primary" color="primary" className="w-100 h-100">Become a Crusader</Button>
-          </Link>
-        </div>      
-
       </Container>
       </section>  
       <section>
+        <FooterLanding />
         <Footer />
       </section>
     </>

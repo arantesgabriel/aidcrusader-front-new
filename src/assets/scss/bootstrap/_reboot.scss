@@ -90,6 +90,22 @@ hr {
   color: var(--#{$prefix}heading-color);
 }
 
+%subs {
+  font-family: var(--#{$prefix}body-font-family);
+  @include font-size(var(--#{$prefix}body-font-size));
+  font-weight: var(--#{$prefix}body-font-weight);
+  line-height: var(--#{$prefix}body-line-height);
+  color: var(--#{$prefix}sub-color);
+  text-align: var(--#{$prefix}body-text-align);
+  -webkit-text-size-adjust: 100%; // 3
+  -webkit-tap-highlight-color: rgba($black, 0); // 4
+}
+
+p{
+  @extend %subs;
+  @include font-size(var(--#{$prefix}body-font-size));
+}
+
 h1 {
   @extend %heading;
   @include font-size($h1-font-size);

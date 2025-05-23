@@ -3,6 +3,15 @@
     margin-left: unset;
 }
 
+.truth-icon {
+  color: #000; /* cor padrão */
+  transition: color 0.3s;
+}
+
+.truth-icon:hover {
+  color: #e91e63; /* muda ao passar o mouse */
+}
+
 @media (min-width:1500px) {
     body.sidebar-main{
         .iq-footer {
