@@ -38,7 +38,7 @@ const Calendar = () => {
         moment(new Date(), "YYYY-MM-DD")
           .add(-20, "days")
           .format("YYYY-MM-DD") ,
-      color: "#50b5ff",
+      color: "#0081b0",
     },
     {
       title: "5:30a All Day Event",
@@ -168,7 +168,7 @@ const Calendar = () => {
         moment(new Date(), "YYYY-MM-DD")
           .add(1, "days")
           .format("YYYY-MM-DD") ,
-      color: " #50b5ff",
+      color: " #0081b0",
     },
     {
       groupId: "999",
@@ -177,7 +177,7 @@ const Calendar = () => {
         moment(new Date(), "YYYY-MM-DD")
           .add(8, "days")
           .format("YYYY-MM-DD") ,
-      color: " #50b5ff",
+      color: " #0081b0",
     },
     {
       groupId: "999",

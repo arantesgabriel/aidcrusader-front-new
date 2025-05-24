@@ -25,7 +25,7 @@ const Footer = (props) => {
     return (
         <>
             <footer className="iq-footer p-0">
-                <Container fluid className="mt-0 px-5" style={{backgroundColor: '#DFE1EE'}}>
+                <Container fluid className="mt-0 px-5" style={{backgroundColor: '#f4f4f4'}}>
                     <Row className='fw-bold px-5'>
                         <Col lg="6">
                             <ul className="list-inline w-100 mb-0">

@@ -11,7 +11,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import { SiTiktok } from "react-icons/si";
 import truth_social from "./truth_social_icon.svg";
 import AppLogoStack from "../../../../assets/images/login/logo-stack.svg";
-import AppLogoLine  from "../../../../assets/images/login/logo-line.png";
+import AppLogoLine  from "../../../../assets/images/login/logo-line-desc.png";
 
 
 const FooterLanding = (props) => {

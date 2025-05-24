@@ -13,7 +13,7 @@ export const ContainerPerson = styled.div`
     width: 100%;
     padding: 20px 10px;
 
-    background: #DFE1EE;
+    background: #f4f4f4;
     margin-top: 40px;
 
     /* Inside auto layout */

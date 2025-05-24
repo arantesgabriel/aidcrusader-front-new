@@ -8,8 +8,8 @@ import {
 import { Link } from "react-router-dom";
 
 //image
-import logo from "../../../assets/images/login/logo-line.png";
-import comingSoon from "../../../assets/images/coming-soon/coming.png";
+import logo from "../../../assets/images/login/logo-line-desc.png";
+import comingSoon from "../../../assets/images/coming-soon/coming-soon.png";
 
 const ComingSoon = () => {
   return (

@@ -365,7 +365,7 @@ const FormElement = () => {
                     </Form.Group>
                     <Form.Group className="form-group">
                       <Form.Label>Input Color </Form.Label>
-                      <input type="color" className="form-control" id="exampleInputcolor" defaultValue="#50b5ff" />
+                      <input type="color" className="form-control" id="exampleInputcolor" defaultValue="#0081b0" />
                     </Form.Group>
                     <Form.Group className="form-group">
                       <Form.Label htmlFor="exampleFormControlSelect1">

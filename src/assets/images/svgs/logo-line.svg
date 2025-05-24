@@ -4,7 +4,7 @@
 		.s0 { fill: #2b3990 } 
 	</style>
 	<filter id="f0">
-		<feFlood flood-color="#50b5ff" flood-opacity="1" />
+		<feFlood flood-color="#0081b0" flood-opacity="1" />
 		<feBlend mode="normal" in2="SourceGraphic"/>
 		<feComposite in2="SourceAlpha" operator="in" />
 	</filter>

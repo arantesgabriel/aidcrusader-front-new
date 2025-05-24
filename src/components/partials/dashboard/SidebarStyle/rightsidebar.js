@@ -57,7 +57,7 @@ const RightSidebar = () => {
           <Card className="shadow-none m-0 h-100">
             <Card.Body className="px-0 pt-0">
               <div className="p-4">
-                <h6 className="fw-semibold m-0">Chats</h6>
+                <h6 className="fw-semibold m-0">Message in Bottle</h6>
                 <div className="mt-4 iq-search-bar device-search ">
                   <Form action="#" className="searchbox position-relative">
                     <Link className="search-link" to="#">
@@ -478,21 +478,22 @@ const RightSidebar = () => {
                   </Tab.Content>
                 </div>
               </Tab.Container>
-              <div
-                className="right-sidebar-toggle bg-primary text-white mt-3 d-flex"
-              >
+              <div className="right-sidebar-toggle bg-primary text-white mt-3 d-flex">
                 <span className="material-symbols-outlined">chat</span>
               </div>
               <div className="conversion-button">
                 <Button
-                  onClick={() => history('/chat/index')}
+                  onClick={() => history("/chat/index")}
                   as="a"
                   className="btn btn-primary w-100 py-3 d-block rounded-0"
                 >
                   View All Conversion
                 </Button>
               </div>
-              <div className="right-sidebar-toggle bg-primary text-white mt-3 d-flex" onClick={minirightsidebar}>
+              <div
+                className="right-sidebar-toggle bg-primary text-white mt-3 d-flex"
+                onClick={minirightsidebar}
+              >
                 <img
                   src={crusaderMib}
                   className="crusader-mib-img"

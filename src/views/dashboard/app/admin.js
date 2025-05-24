@@ -16,7 +16,7 @@ import Chart from "react-apexcharts";
 const Admin = () => {
   const adminChart = {
     options: {
-      colors: ["#50b5ff"],
+      colors: ["#0081b0"],
       chart: {
         toolbar: {
           show: false,
@@ -35,7 +35,7 @@ const Admin = () => {
       markers: {
         size: 6,
         colors: "#FFFFFF",
-        strokeColors: ["#50b5ff"],
+        strokeColors: ["#0081b0"],
         strokeWidth: 2,
         strokeOpacity: 0.9,
         strokeDashArray: 0,
@@ -90,7 +90,7 @@ const Admin = () => {
 
   const adminChart1 = {
     options: {
-      colors: ["#50b5ff", "#d592ff"],
+      colors: ["#0081b0", "#d592ff"],
       plotOptions: {
         radialBar: {
           inverseOrder: false,

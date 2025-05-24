@@ -9,7 +9,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 // img
 // import logo from "../../../assets/images/logo-full.png";
-import logo from "../../../assets/images/login/logo-line.png";
+import logo from "../../../assets/images/login/logo-line-desc.png";
 import login1 from "../../../assets/images/login/1.jpg";
 import login2 from "../../../assets/images/login/2.jpg";
 import login3 from "../../../assets/images/login/3.jpg";
