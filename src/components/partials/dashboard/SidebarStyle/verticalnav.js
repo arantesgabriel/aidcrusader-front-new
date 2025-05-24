@@ -128,11 +128,11 @@ const VerticalNav = React.memo(() => {
             >
               <Link
                 className={`${
-                  location.pathname === "/dashboard/extrapages/blankpage"
+                  location.pathname === "/dashboard/app/friend-list"
                     ? "active"
                     : ""
                 } nav-link`}
-                to="/dashboard/extrapages/blankpage"
+                to="/dashboard/app/friend-list"
               >
                 <i className="icon material-symbols-outlined fs-4">people</i>
                 <span className="item-name">FR</span>
@@ -141,11 +141,11 @@ const VerticalNav = React.memo(() => {
           ) : (
             <Link
               className={`${
-                location.pathname === "/dashboard/extrapages/blankpage"
+                location.pathname === "/dashboard/app/friend-list"
                   ? "active"
                   : ""
               } nav-link`}
-              to="/dashboard/extrapages/blankpage"
+              to="/dashboard/app/friend-list"
             >
               <i className="icon material-symbols-outlined fs-4">people</i>
               <span className="item-name">Friend Request</span>
@@ -202,11 +202,11 @@ const VerticalNav = React.memo(() => {
         <Nav.Item as="li">
           <Link
             className={`${
-              location.pathname === "/dashboard/app/friend-request"
+              location.pathname === "/extra-pages/pages-comingsoon"
                 ? "active"
                 : ""
             } nav-link`}
-            to="/dashboard/app/friend-request"
+            to="/extra-pages/pages-comingsoon"
           >
             <i className="icon material-symbols-outlined filled">
               calendar_today
@@ -223,11 +223,11 @@ const VerticalNav = React.memo(() => {
         <Nav.Item as="li">
           <Link
             className={`${
-              location.pathname === "/dashboard/app/friend-request"
+              location.pathname === "/extra-pages/pages-comingsoon"
                 ? "active"
                 : ""
             } nav-link`}
-            to="/dashboard/app/friend-request"
+            to="/extra-pages/pages-comingsoon"
           >
             <i className="icon material-symbols-outlined filled">settings</i>
             <OverlayTrigger
@@ -242,11 +242,11 @@ const VerticalNav = React.memo(() => {
         <Nav.Item as="li">
           <Link
             className={`${
-              location.pathname === "/dashboard/app/friend-request"
+              location.pathname === "/extra-pages/pages-comingsoon"
                 ? "active"
                 : ""
             } nav-link`}
-            to="/dashboard/app/friend-request"
+            to="/extra-pages/pages-comingsoon"
           >
             <i className="icon material-symbols-outlined filled">dashboard</i>
             <OverlayTrigger
@@ -279,10 +279,10 @@ const VerticalNav = React.memo(() => {
         <Nav.Item as="li">
           <Link
             className={`${
-              location.pathname === "/dashboards/app/groups" ? "active" : ""
+              location.pathname === "/extra-pages/pages-comingsoon" ? "active" : ""
             } nav-link `}
             aria-current="page"
-            to="/dashboards/app/groups"
+            to="/extra-pages/pages-comingsoon"
           >
             <OverlayTrigger
               placement="right"
@@ -304,11 +304,11 @@ const VerticalNav = React.memo(() => {
         <Nav.Item as="li">
           <Link
             className={`${
-              location.pathname === "/dashboard/app/friend-request"
+              location.pathname === "/extra-pages/pages-comingsoon"
                 ? "active"
                 : ""
             } nav-link`}
-            to="/dashboard/app/friend-request"
+            to="/extra-pages/pages-comingsoon"
           >
             <i className="icon material-symbols-outlined filled">wallet</i>
             <OverlayTrigger
