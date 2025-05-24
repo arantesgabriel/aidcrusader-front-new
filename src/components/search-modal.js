@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import { Dropdown, Form, Modal } from 'react-bootstrap'
+import React, { Fragment, useState } from 'react';
+import { Dropdown, Form, Modal } from 'react-bootstrap';
 
 // images
 
@@ -12,7 +12,80 @@ import user6 from "../assets/images/user/15.jpg";
 import user7 from "../assets/images/user/13.jpg";
 import { Link } from 'react-router-dom';
 
-const SearchModal = () => {
+const SearchModal = ({ searchTerm }) => {
+        const initialUsers = [
+        {
+        id: 1,
+        name: "Paige Turner",
+        username: "Paige001",
+        status: "online",
+        avatar: user1,
+        },
+        {
+        id: 2,
+        name: "Monty Carlo",
+        username: "Carlo.m",
+        status: "online",
+        avatar: user2,
+        },
+        {
+        id: 3,
+        name: "Paul Molive",
+        username: "Paul.45",
+        status: "offline",
+        avatar: user3,
+        },
+    ];
+
+    const [users, setUsers] = useState(initialUsers);
+
+    const clearAllResults = () => {
+        setUsers([]);
+        console.log('ok')
+    };
+
+    const removeUser = (id) => {
+        setUsers(users.filter((user) => user.id !== id));
+    };
+
+
+    const initialSuggestions = [
+        {
+        id: 1,
+        name: "Annette Black",
+        followedBy: "Followed by Jerome_bell + 2 more",
+        avatar: user4,
+        },
+        {
+        id: 2,
+        name: "Ellyse Perry",
+        followedBy: "Followed by _@rina",
+        avatar: user5,
+        },
+        {
+        id: 3,
+        name: "Pete Sariya",
+        followedBy: "Followed by chris_18 + 5 more",
+        avatar: user6,
+        },
+        {
+        id: 4,
+        name: "Aman Verma",
+        followedBy: "Followed by Jerome_bell and _@rina",
+        avatar: user7,
+        },
+    ];
+
+    const [suggestions, setSuggestions] = useState(initialSuggestions);
+
+    const removeSuggestion = (id) => {
+        setSuggestions(suggestions.filter((s) => s.id !== id));
+    };
+
+    const filteredUsers = users.filter((user) =>
+        user.name.toLowerCase().includes((searchTerm || "").toLowerCase())
+    );
+
     return (
         <Fragment>
             <Dropdown.Menu bsPrefix=' ' className={`search-modal-custom`} >
@@ -47,7 +120,7 @@ const SearchModal = () => {
                                 Recent
                             </h4>
 
-                            <Link to="/" className="text-dark">
+                            <Link to="#" onClick={clearAllResults} className="text-dark">
                                 Clear All
                             </Link>
                         </div>
@@ -57,94 +130,52 @@ const SearchModal = () => {
                         <div className="item-header-scroll">
                             <div className="search-modal-body">
                                 <div className="d-flex d-lg-none align-items-center justify-content-between w-100 p-3 pb-0">
-                                    <h5
-                                        className="modal-title h4"
-                                        id="exampleModalFullscreenLabel"
+                                <h5 className="modal-title h4" id="exampleModalFullscreenLabel">
+                                Recent
+                                </h5>
+                                <Link to="#" onClick={clearAllResults} className="text-dark">
+                                Clear All
+                                </Link>
+                            </div>
+
+                            {filteredUsers.map((user) => (
+                                <div
+                                key={user.id}
+                                className="d-flex align-items-center search-hover py-2 px-3"
+                                >
+                                <div className="flex-shrink-0">
+                                    <img
+                                    src={user.avatar}
+                                    className="align-self-center img-fluid avatar-50 rounded-pill"
+                                    alt={user.name}
+                                    />
+                                </div>
+                                <div className="d-flex ms-3 w-100 justify-content-between">
+                                    <div className="d-flex flex-column">
+                                    <div>
+                                        <Link to="#" className="h6">
+                                        {user.name}
+                                        </Link>
+                                        <span
+                                        className={
+                                            user.status === "online"
+                                            ? "profile-status-online"
+                                            : "profile-status-offline"
+                                        }
+                                        ></span>
+                                    </div>
+                                    <span className="mb-0">{user.username}</span>
+                                    </div>
+                                    <Link
+                                    to="#"
+                                    onClick={() => removeUser(user.id)}
+                                    className="material-symbols-outlined text-dark font-size-16"
                                     >
-                                        Recent
-                                    </h5>
-                                    <Link to="#" className="text-dark">
-                                        Clear All
+                                    close
                                     </Link>
                                 </div>
-                                <div className="d-flex align-items-center search-hover py-2 px-3">
-                                    <div className="flex-shrink-0">
-                                        <img
-                                            src={user1}
-                                            className="align-self-center img-fluid avatar-50 rounded-pill"
-                                            alt="#"
-                                        />
-                                    </div>
-                                    <div className="d-flex ms-3 w-100 justify-content-between">
-                                        <div className="d-flex flex-column">
-                                            <div>
-                                                <Link to="#" className="h6">
-                                                    Paige Turner
-                                                </Link>
-                                                <span className="profile-status-online"></span>
-                                            </div>
-                                            <span className="mb-0">Paige001</span>
-                                        </div>
-                                        <Link
-                                            to="#"
-                                            className="material-symbols-outlined text-dark font-size-16"
-                                        >
-                                            close
-                                        </Link>
-                                    </div>
                                 </div>
-                                <div className="d-flex align-items-center search-hover py-2 px-3">
-                                    <div className="flex-shrink-0">
-                                        <img
-                                            src={user2}
-                                            className="align-self-center img-fluid avatar-50 rounded-pill"
-                                            alt="#"
-                                        />
-                                    </div>
-                                    <div className="d-flex ms-3 w-100 justify-content-between">
-                                        <div className="d-flex flex-column">
-                                            <div>
-                                                <Link to="#" className="h6">
-                                                    Monty Carlo
-                                                </Link>
-                                                <span className="profile-status-online"></span>
-                                            </div>
-                                            <span>Carlo.m</span>
-                                        </div>
-                                        <Link
-                                            to="#"
-                                            className="material-symbols-outlined text-dark font-size-16"
-                                        >
-                                            close
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="d-flex align-items-center search-hover py-2 px-3">
-                                    <div className="flex-shrink-0">
-                                        <img
-                                            src={user3}
-                                            className="align-self-center img-fluid avatar-50 rounded-pill"
-                                            alt="#"
-                                        />
-                                    </div>
-                                    <div className="d-flex ms-3 w-100 justify-content-between">
-                                        <div className="d-flex flex-column">
-                                            <div>
-                                                <Link to="#" className="h6">
-                                                    Paul Molive
-                                                </Link>
-                                                <span className="profile-status-offline"></span>
-                                            </div>
-                                            <span>Paul.45</span>
-                                        </div>
-                                        <Link
-                                            to="#"
-                                            className="material-symbols-outlined text-dark font-size-16"
-                                        >
-                                            close
-                                        </Link>
-                                    </div>
-                                </div>
+                            ))}
                                 <div className="py-2 px-3">
                                     <h5
                                         className="modal-title"
@@ -153,100 +184,36 @@ const SearchModal = () => {
                                         Suggestion
                                     </h5>
                                 </div>
-                                <div className="d-flex align-items-center search-hover py-2 px-3">
+                                {suggestions.map((profile) => (
+                                    <div
+                                    key={profile.id}
+                                    className="d-flex align-items-center search-hover py-2 px-3"
+                                    >
                                     <div className="flex-shrink-0">
                                         <img
-                                            src={user4}
-                                            className="align-self-center img-fluid avatar-50 rounded-pill"
-                                            alt="#"
+                                        src={profile.avatar}
+                                        className="align-self-center img-fluid avatar-50 rounded-pill"
+                                        alt={profile.name}
                                         />
                                     </div>
                                     <div className="d-flex ms-3 w-100 justify-content-between">
                                         <div className="d-flex flex-column">
-                                            <Link to="#" className="h6">
-                                                Annette Black
-                                            </Link>
-                                            <span>Followed by Jerome_bell + 2 more</span>
+                                        <Link to="#" className="h6">
+                                            {profile.name}
+                                        </Link>
+                                        <span>{profile.followedBy}</span>
                                         </div>
                                         <Link
-                                            to="#"
-                                            className="material-symbols-outlined text-dark font-size-16"
+                                        to="#"
+                                        onClick={() => removeSuggestion(profile.id)}
+                                        className="material-symbols-outlined text-dark font-size-16"
                                         >
-                                            close
+                                        close
                                         </Link>
                                     </div>
-                                </div>
-                                <div className="d-flex align-items-center search-hover py-2 px-3">
-                                    <div className="flex-shrink-0">
-                                        <img
-                                            src={user5}
-                                            className="align-self-center img-fluid avatar-50 rounded-pill"
-                                            alt="#"
-                                        />
                                     </div>
-                                    <div className="d-flex ms-3 w-100 justify-content-between">
-                                        <div className="d-flex flex-column">
-                                            <Link to="#" className="h6">
-                                                Ellyse Perry
-                                            </Link>
-                                            <span>Followed by _@rina</span>
-                                        </div>
-                                        <Link
-                                            to="#"
-                                            className="material-symbols-outlined text-dark font-size-16"
-                                        >
-                                            close
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="d-flex align-items-center search-hover py-2 px-3">
-                                    <div className="flex-shrink-0">
-                                        <img
-                                            src={user6}
-                                            className="align-self-center img-fluid avatar-50 rounded-pill"
-                                            alt="#"
-                                        />
-                                    </div>
-                                    <div className="d-flex ms-3 w-100 justify-content-between">
-                                        <div className="d-flex flex-column">
-                                            <Link to="#" className="h6">
-                                                Pete Sariya
-                                            </Link>
-                                            <span>Followed by chris_18 + 5 more</span>
-                                        </div>
-                                        <Link
-                                            to="#"
-                                            className="material-symbols-outlined text-dark font-size-16"
-                                        >
-                                            close
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="d-flex align-items-center search-hover py-2 px-3">
-                                    <div className="flex-shrink-0">
-                                        <img
-                                            src={user7}
-                                            className="align-self-center img-fluid avatar-50 rounded-pill"
-                                            alt="#"
-                                        />
-                                    </div>
-                                    <div className="d-flex ms-3 w-100 justify-content-between">
-                                        <div className="d-flex flex-column">
-                                            <Link to="#" className="h6">
-                                                Aman Verma
-                                            </Link>
-                                            <span>
-                                                Followed by Jerome_bell and _@rina{" "}
-                                            </span>
-                                        </div>
-                                        <Link
-                                            to="#"
-                                            className="material-symbols-outlined text-dark font-size-16"
-                                        >
-                                            close
-                                        </Link>
-                                    </div>
-                                </div>
+                                ))}
+                                
                             </div>
                         </div>
                     </Modal.Body>

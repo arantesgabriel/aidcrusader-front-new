@@ -29,6 +29,7 @@ const Header = () => {
   const appName = useSelector(SettingSelector.app_name);
 
   const [active, setActive] = useState("home");
+  const [searchText, setSearchText] = useState("");
 
   const minisidebar = () => {
     const sidebarMini = document.getElementsByTagName("ASIDE")[0];
@@ -166,8 +167,9 @@ const Header = () => {
                   </Link>
                   <Form.Control
                     type="text"
+                    onChange={(e) => setSearchText(e.target.value)}
                     className="text search-input form-control bg-light-subtle"
-                    placeholder="Search for people or groups..."
+                    placeholder="Search for people or campaings..."
                   />
                   <Link
                     className="d-lg-none d-flex d-none d-lg-block"
@@ -176,7 +178,7 @@ const Header = () => {
                     <span className="material-symbols-outlined">search12</span>
                   </Link>
                 </Dropdown.Toggle>
-                <SearchModal />
+                <SearchModal searchTerm={searchText} />
               </Dropdown>
             </div>
 
