@@ -2,6 +2,7 @@
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
+
 //masnory
 
 .my-masonry-grid {
@@ -159,6 +160,35 @@
   max-width: 46.875rem !important;
 }
 
+.add-photo:hover{
+  background: linear-gradient(135deg, #32CD32, #228B22);
+  color: white!important;
+}
+
+.tag-friend:hover{
+  background: linear-gradient(135deg, #FF69B4, #FF1493);
+  color: white!important;
+}
+
+.feeling:hover{
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: white!important;
+}
+
+.check-in:hover{
+  background: linear-gradient(135deg, #8A2BE2, #6A0DAD);
+  color: white!important;
+}
+
+.video:hover{
+  background: linear-gradient(135deg, #FF6347, #DC143C);
+  color: white!important;
+}
+
+.gif:hover{
+  background: linear-gradient(135deg, #FF8C00, #FF4500);
+  color: white!important;
+}
 //fullcalendar
 
 .fc-button-primary {

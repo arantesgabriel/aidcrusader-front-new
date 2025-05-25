@@ -1,3 +1,24 @@
+.story#yourstory-add .img::after {
+  content: "+";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #0d6efd;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+.story#yourstory-add .img {
+  position: relative;
+}
+
+
 .stories {
     &.storiesWrapper {
         scrollbar-width: none; // Firefox

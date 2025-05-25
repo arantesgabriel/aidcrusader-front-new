@@ -14,6 +14,7 @@ import {
 import { Link } from "react-router-dom";
 import Card from "../../components/Card";
 import CreatePost from "../../components/create-post";
+import CreatePostNew from "../../components/create-post-new";
 
 //image
 import user1 from "../../assets/images/user/1.jpg";
@@ -115,13 +116,53 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  // stories
+
+  useEffect(() => {
+  const interval = setInterval(() => {
+    const addStoryEl = document.querySelector(".story#yourstory-add");
+
+    if (addStoryEl && !addStoryEl.classList.contains("hooked")) {
+      addStoryEl.classList.add("hooked");
+
+      try {
+        addStoryEl.addEventListener("click", (e) => {
+          try {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("Abrir modal de adicionar story");
+
+            // Aqui você pode chamar seu modal React ou qualquer função
+            // Exemplo:
+            // setShowStoryModal(true);
+          } catch (err) {
+            console.error("Erro ao executar clique do botão de story:", err);
+          }
+        });
+      } catch (err) {
+        console.error("Erro ao adicionar evento no botão de story:", err);
+      }
+    }
+  }, 300);
+
+  return () => clearInterval(interval);
+}, []);
+
+
+
   const stories = [
+    {
+      id: "yourstory-add",
+      photo: user8,
+      name: "Add Story",
+      seen: false,
+      preview: [], // vazio para não abrir nada
+    },
     {
       id: "yourstory",
       photo: user8,
       name: "Your Story",
       link: "https://ramon.codes",
+      seen: false,
       preview: [
         {
           storyid: "yourstory-1",
@@ -298,7 +339,7 @@ const Index = () => {
                 </Row>
                 <Row>
                   <Col sm={12}>
-                    <CreatePost className="card-block card-stretch card-height" />
+                    <CreatePostNew className="card-block card-stretch card-height" />
                   </Col>
                 </Row>
                 <Row className="special-post-container">

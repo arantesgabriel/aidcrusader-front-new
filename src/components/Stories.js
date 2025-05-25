@@ -25,6 +25,26 @@ const Stories = (props) => {
   };
 
   useEffect(() => {
+  const fixYourStoryPosition = () => {
+    const container = document.querySelector(".stories");
+    const yourStory = document.querySelector(".story#yourstory");
+
+    if (container && yourStory) {
+      container.insertBefore(yourStory, container.firstChild);
+    }
+  };
+
+  const interval = setInterval(() => {
+    const story = document.querySelector(".story#yourstory");
+    if (story) {
+      fixYourStoryPosition();
+      clearInterval(interval);
+    }
+  }, 300);
+}, []);
+
+
+  useEffect(() => {
   if (ref.current !== null) {
     const storyArr = [];
 

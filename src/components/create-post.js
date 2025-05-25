@@ -58,7 +58,7 @@ const CreatePost = (props) => {
               >
                 GIF
               </Dropdown.Item>
-              <Dropdown.Item
+              {/*<Dropdown.Item
                 href="#"
                 onClick={handleShow}
               >
@@ -69,7 +69,7 @@ const CreatePost = (props) => {
                 onClick={handleShow}
               >
                 Play with Friend
-              </Dropdown.Item>
+              </Dropdown.Item>*/}
             </Dropdown.Menu>
           </Dropdown>
         </div>
@@ -315,6 +315,7 @@ const CreatePost = (props) => {
                   </Link>
                 </div>
               </li>
+              {/*
               <li className="col-md-6 mb-3">
                 <div className="bg-primary-subtle rounded p-2 pointer me-3">
                   <Link to="#" className="custom-link-color d-inline-block fw-medium text-body">
@@ -334,7 +335,7 @@ const CreatePost = (props) => {
                     Play with Friends
                   </Link>
                 </div>
-              </li>
+              </li>*/}
             </ul>
             <hr />
             <div className="other-option">
@@ -368,7 +369,7 @@ const CreatePost = (props) => {
                           <span className="material-symbols-outlined">save</span>
                           <div className="data ms-2">
                             <h6>Public</h6>
-                            <p className="mb-0">Anyone on or off Facebook</p>
+                            <p className="mb-0">Anyone on or off Aid Crusader</p>
                           </div>
                         </div>
                       </Dropdown.Item>
@@ -377,7 +378,7 @@ const CreatePost = (props) => {
                           <span className="material-symbols-outlined">cancel</span>
                           <div className="data ms-2">
                             <h6>Friends</h6>
-                            <p className="mb-0">Your Friend on facebook</p>
+                            <p className="mb-0">Your Friend on Aid Crusader</p>
                           </div>
                         </div>
                       </Dropdown.Item>
